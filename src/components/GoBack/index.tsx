@@ -10,6 +10,10 @@ const StyledLink = styled(Link)`
     justify-content: center;
     align-items: center;
     gap: 5px;
+
+    @media print {
+        display: none;
+    }
 `;
 
 function GoBack() {
