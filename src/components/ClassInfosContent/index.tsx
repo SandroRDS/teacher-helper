@@ -24,6 +24,11 @@ const Infos = styled.div`
         text-align: justify;
     }
 
+    p:nth-of-type(1) {
+        text-align: center;
+        color: #51c251;
+    }
+
     button {
         display: block;
         margin: 10px auto;
@@ -34,15 +39,17 @@ const Infos = styled.div`
 type ClassInfosContentProps = {
     studentName: string;
     studentDescription: string;
+    studentSponte: string;
     handleDeleteInfo: () => void;
 };
 
 function ClassInfosContent(props: ClassInfosContentProps) {
-    const { studentName, studentDescription, handleDeleteInfo } = props;
+    const { studentName, studentDescription, studentSponte, handleDeleteInfo } = props;
 
     return (
         <Infos>
             <h3>{studentName}</h3>
+            <p>({`Sponte ${studentSponte}`})</p>
             <p>{studentDescription}</p>
             <button onClick={handleDeleteInfo}>
                 <GoogleIcon iconName="delete" />

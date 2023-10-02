@@ -27,6 +27,7 @@ const ModalContent = styled.form`
 const Label = styled.label`
     font-size: .9em;
     font-weight: 300;
+    margin-top: 10px;
     margin-bottom: 5px;
 `;
 
@@ -65,6 +66,12 @@ const Textarea = styled.textarea`
     outline: none;
 `;
 
+const Select = styled.select`
+    width: 100%;
+    height: 25px;
+    font-size: .8em;
+    outline: none;
+`;
 
 type ModalAddClassInfosProps = {
     open: boolean;
@@ -79,6 +86,7 @@ function ModalAddClassInfos(props: ModalAddClassInfosProps) {
         defaultValues: {
             studentName: '',
             studentDescription: '',
+            studentSponte: '',
         }
     };
 
@@ -118,6 +126,18 @@ function ModalAddClassInfos(props: ModalAddClassInfosProps) {
                 <ErrorMessage
                     errors={errors}
                     name="studentDescription"
+                    render={({ message }) => <Alert severity="error">{message}</Alert>}
+                />
+                <Label>Informe em qual Sponte o aluno se encontra:</Label>
+                <Select {...register('studentSponte', {
+                    required: 'O Sponte do aluno deve ser informado.',
+                })}>
+                    <option value="Campos">Sponte Campos</option>
+                    <option value="Macaé">Sponte Macaé</option>
+                </Select>
+                <ErrorMessage
+                    errors={errors}
+                    name="studentSponte"
                     render={({ message }) => <Alert severity="error">{message}</Alert>}
                 />
                 <Button type="submit">Adicionar aluno</Button>
