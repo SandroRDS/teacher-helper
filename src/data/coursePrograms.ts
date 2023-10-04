@@ -55,6 +55,32 @@ export default [
                 description: 'Abordagem de lógica de programação com criação de jogos em JavaScript por blocos, trabalhando conceitos (como broadcast, funções e animação de personagens) com usos mais complexos. Apresentação e manipulação do plano cartesiano em programação. Introdução a circuitos elétricos e à integração com a Makey Makey.',
             },
         ],
+    },
+    {
+        courseProgramModule: 'CK2',
+        courseProgramName: "Control+Kids 1 Presencial", 
+        courseProgramTools: [
+            {
+                programName: 'Micro:bit',
+                numberOfClasses: 5,
+                description: 'Introdução à utilização da Micro:bit, programação por blocos em JavaScript trabalhando com conceitos específicos da robótica. Introdução à estrutura básica de programação em blocos utilizando conceitos de loops, condicionais e variáveis.',
+            },
+            {
+                programName: 'Kodu Game Lab',
+                numberOfClasses: 4,
+                description: 'Introdução ao conceito de lógica de programação integrada a game e level design, interface e funcionalidade do Kodu Game Lab desenvolvendo cenários em 3D e criando jogos com programação orientada a eventos e ações.',
+            },
+            {
+                programName: 'Piskel App',
+                numberOfClasses: 3,
+                description: 'Trabalho de técnicas de pixel art, animação 2D e colorização de artes durante a produção de assets que podem ser utilizados em produções de jogos em diversas ferramentas como, por exemplo, no Construct e Scratch.',
+            },
+            {
+                programName: 'Scratch',
+                numberOfClasses: 5,
+                description: 'Abordagem de lógica de programação com criação de jogos em JavaScript por blocos, trabalhando conceitos (como broadcast, funções e animação de personagens) com usos mais complexos. Apresentação e manipulação do plano cartesiano em programação. Introdução a circuitos elétricos e à integração com a Makey Makey.',
+            },
+        ],
     }
 
 ];

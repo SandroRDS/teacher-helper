@@ -73,7 +73,7 @@ function ModalAddClass(props: ModalAddClassProps) {
     };
 
     const {
-        register, 
+        register,
         handleSubmit,
         getValues,
         formState: { errors }
@@ -89,8 +89,8 @@ function ModalAddClass(props: ModalAddClassProps) {
     }
 
     return (
-        <CentralizedModal open={open} onClose={onClose} onSubmit={handleSubmit(onSubmit)}>
-            <ModalContent>
+        <CentralizedModal open={open} onClose={onClose}>
+            <ModalContent onSubmit={handleSubmit(onSubmit)}>
                 <Label>Informe o nome da turma:</Label>
                 <Input
                     type="text"

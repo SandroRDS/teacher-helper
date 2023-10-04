@@ -7,110 +7,109 @@ import selectCourseProgramTool from "../../utils/selectCourseProgramTool";
 import ToolCard from "../ToolCard";
 
 const Page = styled.article`
-    display: none;
+    * {
+        font-family: 'Comic Neue';
+    }
+
+    display: block;
+    box-shadow: 2px 2px 3px 1px #00000060;
+
+    background-image: url('/src/images/ctrlplaylogo.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    height: 29.7cm;
+    width: 21cm;
+    padding: 1cm 2.54cm;
+    margin: 20px auto;
+
+    display: flex;
+    flex-direction: column;
+
+    h1, h2 {
+        font-size: 35pt;
+        text-align: center;
+        color: #db7a0b;
+        font-weight: 600;
+    }
+
+    h2, h3 {
+        font-size: 32pt;
+        color: #145999;
+        margin-bottom: 8mm;
+        font-weight: 600;
+    }
+
+    h3 {
+        font-size: 20pt;
+        color: #3653a3;
+    }
 
     @media print {
-        * {
-            font-family: 'Comic Neue';
-        }
-
-        display: block;
-        border: 1px solid black;
-
-        background-image: url('/src/images/ctrlplaylogo.png');
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-
-        height: 29.7cm;
-        width: 21cm;
-        padding: 1cm 2.54cm;
-
-        display: flex;
-        flex-direction: column;
-
-        h1, h2 {
-            font-size: 35pt;
-            text-align: center;
-            color: #db7a0b;
-            font-weight: 600;
-        }
-
-        h2, h3 {
-            font-size: 32pt;
-            color: #145999;
-            margin-bottom: 8mm;
-            font-weight: 600;
-        }
-
-        h3 {
-            font-size: 20pt;
-            color: #3653a3;
-        }
+        margin: 0;
     }
 `;
 
 const Info = styled.p`
-    @media print {
-        font-size: 15pt;
-        margin: 7mm 0;
-    
-        span:nth-of-type(1) {
-            font-weight: 600;
-        }
+    font-size: 15pt;
+    margin: 7mm 0;
+
+    span:nth-of-type(1) {
+        font-weight: 600;
     }
 `;
 
 const FeedbacksTable = styled.table`
-    @media print {
-        margin: 0 auto;
-        border-spacing: 0;
-        max-width: 20cm;
+    margin: 0 auto;
+    border-spacing: 0;
+    max-width: 20cm;
 
-        th {
-            padding: 3mm 10mm;
-            border: .7mm solid #4355a5;
-            border-right-width: 0px;
-    
-            background-color: orange;
-            font-weight: 600;
-        }
-    
-        th:first-child {
-            border-radius: 3mm 0 0 0;
-        }
-    
-        th:last-child {
-            border-radius: 0 3mm 0 0;
-            border-right-width: .7mm;
-        }
+    th {
+        padding: 3mm 10mm;
+        border-width: .5mm 0;
+        border-style: solid;
+        border-color: #3653a3;
 
-        td {
-            background-color: #f5f5f589;
-            border: .6mm solid #4355a589;
-            padding: 5mm 6mm;
-            text-align: center;
-            border-bottom-width: 0;
-            border-right-width: 0;
-            font-size: 13pt;
-        }
+        background-color: orange;
+        font-weight: 600;
+    }
 
-        td:first-child {
-            font-weight: 600;
-        }
+    th:first-child {
+        border-radius: 3mm 0 0 0;
+        border: .7mm solid #3653a3;
+    }
 
-        td:nth-of-type(2) {
-            font-weight: 600;
-            color: #0b4abe;
-            font-size: 15pt;
-        }
+    th:last-child {
+        border-radius: 0 3mm 0 0;
+        border: .7mm solid #3653a3;
+    }
 
-        tr:last-child td {
-            border-bottom-width: .6mm;
-        }
+    td {
+        background-color: #f5f5f589;
+        border: .6mm solid #4355a589;
+        padding: 5mm 6mm;
+        text-align: center;
+        border-bottom-width: 0;
+        border-right-width: 0;
+        font-size: 13pt;
+    }
 
-        td:last-child {
-            border-right-width: .6mm;
-        }
+    td:first-child {
+        font-weight: 600;
+    }
+
+    td:nth-of-type(2) {
+        font-weight: 600;
+        color: #0b4abe;
+        font-size: 15pt;
+    }
+
+    tr:last-child td {
+        border-bottom-width: .6mm;
+    }
+
+    td:last-child {
+        border-right-width: .6mm;
     }
 `;
 

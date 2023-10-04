@@ -103,8 +103,8 @@ function ModalAddClassInfos(props: ModalAddClassInfosProps) {
     }
 
     return (
-        <CentralizedModal open={open} onClose={onClose} onSubmit={handleSubmit(onSubmit)}>
-            <ModalContent>
+        <CentralizedModal open={open} onClose={onClose}>
+            <ModalContent onSubmit={handleSubmit(onSubmit)}>
                 <Label>Informe o nome do aluno:</Label>
                 <Input
                     type="text"
