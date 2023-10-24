@@ -4,9 +4,15 @@ import GoogleIcon from "../GoogleIcon";
 const Infos = styled.div`
     width: 100%;
     border: 2px solid #78bae6;
+    padding: 10px 5px;
     border-bottom-width: 0;
 
     background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 
     &:last-child {
         border-bottom-width: 2px;
@@ -15,18 +21,34 @@ const Infos = styled.div`
     h3 {
         font-size: 1.2em;
         text-align: center;
-        margin: 10px 0;
     }
 
     p {
-        width: 90%;
-        margin: 0 auto;
-        text-align: justify;
+        color: green;
     }
 
-    p:nth-of-type(1) {
-        text-align: center;
-        color: #51c251;
+    textarea {
+        width: 100%;
+        min-height: 200px;
+
+        padding: 10px;
+        box-shadow: 0 0 4px 1px #1414142f;
+        border-radius: 6px;
+
+        resize: none;
+        outline: none;
+
+        justify-self: center;
+        
+        &::-webkit-scrollbar {
+            background-color: inherit;
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(22, 22, 22, 0.3);
+            border-radius: 12px;
+        }
     }
 
     button {
@@ -50,7 +72,7 @@ function ClassInfosContent(props: ClassInfosContentProps) {
         <Infos>
             <h3>{studentName}</h3>
             <p>({`Sponte ${studentSponte}`})</p>
-            <p>{studentDescription}</p>
+            <textarea>{studentDescription}</textarea>
             <button onClick={handleDeleteInfo}>
                 <GoogleIcon iconName="delete" />
             </button>
